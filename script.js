@@ -295,23 +295,23 @@ learningCards.forEach(card => {
 });
 
 // ===== CURSOR TRAIL EFFECT =====
-const createCursorTrail = () => {
-    const trail = document.createElement('div');
-    trail.className = 'cursor-trail';
-    trail.style.cssText = `
-        position: fixed;
-        width: 10px;
-        height: 10px;
-        background: radial-gradient(circle, rgba(230, 57, 70, 0.8), transparent);
-        border-radius: 50%;
-        pointer-events: none;
-        z-index: 9999;
-        transition: transform 0.1s ease-out;
-    `;
-    document.body.appendChild(trail);
+// const createCursorTrail = () => {
+//     const trail = document.createElement('div');
+//     trail.className = 'cursor-trail';
+//     trail.style.cssText = `
+//         position: fixed;
+//         width: 10px;
+//         height: 10px;
+//         background: radial-gradient(circle, rgba(230, 57, 70, 0.8), transparent);
+//         border-radius: 50%;
+//         pointer-events: none;
+//         z-index: 9999;
+//         transition: transform 0.1s ease-out;
+//     `;
+//     document.body.appendChild(trail);
 
-    return trail;
-};
+//     return trail;
+// };
 
 const trails = [];
 for (let i = 0; i < 5; i++) {
