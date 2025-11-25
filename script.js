@@ -2,6 +2,43 @@
 // TST Landing Page - JavaScript
 // ===================================
 
+// ===== THEME TOGGLE =====
+const themeToggle = document.getElementById('themeToggle');
+const themeIcon = document.getElementById('themeIcon');
+const body = document.body;
+
+// Check for saved theme preference or default to dark mode
+const currentTheme = localStorage.getItem('theme') || 'dark';
+
+// Apply saved theme on page load
+if (currentTheme === 'light') {
+    body.classList.add('light-mode');
+    themeIcon.classList.remove('fa-moon');
+    themeIcon.classList.add('fa-sun');
+}
+
+// Theme toggle functionality
+themeToggle.addEventListener('click', () => {
+    body.classList.toggle('light-mode');
+
+    // Update icon
+    if (body.classList.contains('light-mode')) {
+        themeIcon.classList.remove('fa-moon');
+        themeIcon.classList.add('fa-sun');
+        localStorage.setItem('theme', 'light');
+    } else {
+        themeIcon.classList.remove('fa-sun');
+        themeIcon.classList.add('fa-moon');
+        localStorage.setItem('theme', 'dark');
+    }
+
+    // Add rotation animation to icon
+    themeIcon.style.transform = 'rotate(360deg)';
+    setTimeout(() => {
+        themeIcon.style.transform = 'rotate(0deg)';
+    }, 300);
+});
+
 // Initialize AOS (Animate On Scroll)
 AOS.init({
     duration: 1000,
