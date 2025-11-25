@@ -1292,3 +1292,157 @@ section {
         margin-top: -125px;
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+body {
+    background: #f0f4f8;
+    font-family: Arial, sans-serif;
+}
+
+/* Wrapper لكل كارت */
+.card-wrapper {
+    perspective: 1200px;
+    /* إحساس أكبر بالعمق */
+}
+
+/* الكارت نفسه */
+.card-3d {
+    border-radius: 25px;
+    /* الانحناء */
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    transform-style: preserve-3d;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2), 0 15px 50px rgba(0, 0, 0, 0.15);
+    /* Shadow أغمق */
+    padding: 10px;
+    cursor: pointer;
+    background-color: #fff;
+}
+
+/* Hover Effect 3D + Shadow أغمق */
+.card-wrapper:hover .card-3d {
+    transform: rotateY(10deg) rotateX(10deg) scale(1.05);
+    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.35), 0 35px 80px rgba(0, 0, 0, 0.25);
+}
+
+/* تأثير على الصورة */
+.card-3d img {
+    transition: transform 0.4s ease;
+    border-radius: 50%;
+    /* صورة دائرية */
+}
+
+.card-wrapper:hover .card-3d img {
+    transform: translateZ(30px);
+}
+
+/* تأثير على البودي */
+.card-3d .card-body {
+    transition: transform 0.4s ease;
+}
+
+.card-wrapper:hover .card-3d .card-body {
+    transform: translateZ(20px);
+}
+
+/* تأثير على النصوص و الأزرار */
+.card-3d .card-title,
+.card-3d .card-subtitle,
+.card-3d .card-text,
+.card-3d .btn {
+    transition: transform 0.4s ease;
+}
+
+.card-wrapper:hover .card-3d .card-title,
+.card-wrapper:hover .card-3d .card-subtitle,
+.card-wrapper:hover .card-3d .card-text,
+.card-wrapper:hover .card-3d .btn {
+    transform: translateZ(15px);
+}
+
+/* زرار الهوف */
+.btn-primary:hover {
+    background-color: #0056b3;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.35);
+    /* Shadow أغمق للزرار */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.message {
+    position: absolute;
+    bottom: 0;
+    /* تظهر من تحت */
+    width: 100%;
+    padding: 10px;
+    border-radius: 20px;
+    background: linear-gradient(to top,
+            rgba(255, 255, 255, 0.6) 0%,
+            /* تحت أبيض شفاف */
+            rgba(255, 255, 255, 0) 50%
+            /* فوق شفاف تمامًا */
+        );
+
+
+    /* أبيض شفاف */
+    color: #000;
+    font-weight: bold;
+    backdrop-filter: blur(4px);
+    font-size: 10px;
+    /* اختياري: يعطي شكل جميل */
+}
