@@ -1177,23 +1177,6 @@ section {
     display: flex;
     align-items: center;
     justify-content: center;
-    color: var(--text-primary);
-    text-decoration: none;
-    transition: var(--transition-smooth);
-}
-
-.social-icon:hover {
-    background: var(--gradient-primary);
-    border-color: var(--primary-red);
-    transform: translateY(-5px) rotate(360deg);
-    box-shadow: 0 5px 20px rgba(230, 57, 70, 0.4);
-    color: white;
-}
-
-/* ===== INFO CARDS ===== */
-.info-card {
-    border-radius: 18px;
-    color: var(--text-primary);
     text-align: center;
     min-height: 220px;
     border: 1px solid var(--card-border);
