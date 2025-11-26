@@ -862,7 +862,7 @@ section {
 
 .carousel-item-3d {
     position: absolute;
-    width: 250px;
+    width: 275px;
     height: 300px;
     left: 50%;
     top: 50%;
@@ -1440,9 +1440,10 @@ body {
 
 
     /* أبيض شفاف */
-    color: #000;
+    /* color: #fff;
     font-weight: bold;
-    backdrop-filter: blur(4px);
-    font-size: 10px;
+    backdrop-filter: blur(3px);
+    font-size: 16px;
+    text-align: center; */
     /* اختياري: يعطي شكل جميل */
 }
